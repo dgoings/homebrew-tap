@@ -11,12 +11,12 @@ class Workbook < Formula
   on_macos do
     on_arm do
       url "https://github.com/dgoings/workbook/releases/download/v0.2.0/workbook_0.2.0_darwin_arm64.tar.gz"
-      sha256 "c40cc0aff4718eaf9ada302e7e6d093f205848cec10c56c7156f99916023a9c0"
+      sha256 "60230b3c060483029e9df8f79e67be30accfbd82197f6f856fb02bf2361ce0f8"
     end
 
     on_intel do
       url "https://github.com/dgoings/workbook/releases/download/v0.2.0/workbook_0.2.0_darwin_amd64.tar.gz"
-      sha256 "fb3963f89ded82e1b4855a191b365ab4dfbb023a86e49205d0b0b7abab174c8c"
+      sha256 "334beebadcbc7ba70a432da24694f5ab783d0eb1733d7fdb7ab8d70ecd969a38"
     end
   end
 
