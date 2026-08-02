@@ -5,18 +5,28 @@
 class Workbook < Formula
   desc "Repository-native project tracker for humans and coding agents"
   homepage "https://github.com/dgoings/workbook"
-  version "0.2.0"
-  depends_on :macos
 
   on_macos do
     on_arm do
-      url "https://github.com/dgoings/workbook/releases/download/v0.2.0/workbook_0.2.0_darwin_arm64.tar.gz"
-      sha256 "60230b3c060483029e9df8f79e67be30accfbd82197f6f856fb02bf2361ce0f8"
+      url "https://github.com/dgoings/workbook/releases/download/v0.3.0/workbook_0.3.0_darwin_arm64.tar.gz"
+      sha256 "0a81f5b418681d32dc788c23d6079058da9420d33453bd79be3d21e32b6cf027"
     end
 
     on_intel do
-      url "https://github.com/dgoings/workbook/releases/download/v0.2.0/workbook_0.2.0_darwin_amd64.tar.gz"
-      sha256 "334beebadcbc7ba70a432da24694f5ab783d0eb1733d7fdb7ab8d70ecd969a38"
+      url "https://github.com/dgoings/workbook/releases/download/v0.3.0/workbook_0.3.0_darwin_amd64.tar.gz"
+      sha256 "a5c44cf12ddbac9cef22b6b560fe47cc96f3f545ff7c7f237e7c27dfadf86b89"
+    end
+  end
+
+  on_linux do
+    on_arm do
+      url "https://github.com/dgoings/workbook/releases/download/v0.3.0/workbook_0.3.0_linux_arm64.tar.gz"
+      sha256 "c51bcfe3dd625eca2aa4c8ec6e411032f8653934c3307013e05ff6a2fb3f0135"
+    end
+
+    on_intel do
+      url "https://github.com/dgoings/workbook/releases/download/v0.3.0/workbook_0.3.0_linux_amd64.tar.gz"
+      sha256 "96df8c617ac9d8c7a5cba936fa8fd7b6d71fbee09c456ae8a09c4e4a3746498a"
     end
   end
 
@@ -36,6 +46,6 @@ class Workbook < Formula
   end
 
   test do
-    assert_match version, shell_output("#{bin}/workbook version")
+    assert_match version.to_s, shell_output("#{bin}/workbook version")
   end
 end
