@@ -8,25 +8,25 @@ class Workbook < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/dgoings/workbook/releases/download/v0.4.4/workbook_0.4.4_darwin_arm64.tar.gz"
-      sha256 "59480048c9f058a1ea707ba6cecf762aaa8052cddeb0c03cae3f5bac2646a7be"
+      url "https://github.com/dgoings/workbook/releases/download/v0.5.0/workbook_0.5.0_darwin_arm64.tar.gz"
+      sha256 "54dd40ad4dc0787ba8e116d51cddbc43ca2cbc2508eddaca48aa22e3bedb3375"
     end
 
     on_intel do
-      url "https://github.com/dgoings/workbook/releases/download/v0.4.4/workbook_0.4.4_darwin_amd64.tar.gz"
-      sha256 "e331b60a4221135071069cbb681331a65f8bdc574b574cd152a7657257f92cc8"
+      url "https://github.com/dgoings/workbook/releases/download/v0.5.0/workbook_0.5.0_darwin_amd64.tar.gz"
+      sha256 "84051115232e369e462dc40eb7d14f7cf30ff79209070bd4dae700242b75f6f2"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/dgoings/workbook/releases/download/v0.4.4/workbook_0.4.4_linux_arm64.tar.gz"
-      sha256 "ce8731c78ee0b473febf66459b6a0ebf466fe2eaa8c92c57e12de8785a4d7913"
+      url "https://github.com/dgoings/workbook/releases/download/v0.5.0/workbook_0.5.0_linux_arm64.tar.gz"
+      sha256 "472ccd0ce64c5be3d241a09d5dc7cd5f435a8ad02b740d6a733efb6ade5dfb35"
     end
 
     on_intel do
-      url "https://github.com/dgoings/workbook/releases/download/v0.4.4/workbook_0.4.4_linux_amd64.tar.gz"
-      sha256 "648314df90029849f5c1dddb80c95c96f89b9c83f67d072a3c1b05f9aea49c17"
+      url "https://github.com/dgoings/workbook/releases/download/v0.5.0/workbook_0.5.0_linux_amd64.tar.gz"
+      sha256 "f54de8830bf57c1df35a52469b5f9ce946442874c497052ec9050db3420569c6"
     end
   end
 
