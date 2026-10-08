@@ -8,30 +8,34 @@ class Workbook < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/dgoings/workbook/releases/download/v0.5.1/workbook_0.5.1_darwin_arm64.tar.gz"
-      sha256 "b0b5a7bc0de662d855f94b73150bfc34a66d66de6538318336cfea52295ceebd"
+      url "https://github.com/dgoings/workbook/releases/download/v0.6.0/workbook_0.6.0_darwin_arm64.tar.gz"
+      sha256 "07340fac1e0157e715e3e621fbdee52e19fbb0aaf3eef0387d7dcc37ab6946aa"
     end
 
     on_intel do
-      url "https://github.com/dgoings/workbook/releases/download/v0.5.1/workbook_0.5.1_darwin_amd64.tar.gz"
-      sha256 "d2dd1ba122edae967a03aa3e87c434d153d637ae521897931f9a986c22403d32"
+      url "https://github.com/dgoings/workbook/releases/download/v0.6.0/workbook_0.6.0_darwin_amd64.tar.gz"
+      sha256 "33d3b8567d11f96875fd428cd148e0becafc527045bbd6c0aebaf8ec37e790e9"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/dgoings/workbook/releases/download/v0.5.1/workbook_0.5.1_linux_arm64.tar.gz"
-      sha256 "8848dc031210f17733bb4999d1f99b9d738a8958df1d30ad0d51b34887d5bc72"
+      url "https://github.com/dgoings/workbook/releases/download/v0.6.0/workbook_0.6.0_linux_arm64.tar.gz"
+      sha256 "b9afe238c814ed73d5f5fa2d3830ff6a2c8cc39bff8c2910918a7c1621e0eaae"
     end
 
     on_intel do
-      url "https://github.com/dgoings/workbook/releases/download/v0.5.1/workbook_0.5.1_linux_amd64.tar.gz"
-      sha256 "b03271fb6ff0fc96513848b0c5316214ef441f1dce0cb890c185b8da2269c392"
+      url "https://github.com/dgoings/workbook/releases/download/v0.6.0/workbook_0.6.0_linux_amd64.tar.gz"
+      sha256 "843fdb4e707073d77fce1cf56f78c45f802b14e3c92281e09c4981c729c67485"
     end
   end
 
   def install
     bin.install "workbook"
+    # The scripts are generated from the command schema, so they are built from
+    # the binary being installed rather than shipped in the archive and left to
+    # drift from the version they complete.
+    generate_completions_from_executable(bin/"workbook", "completion")
   end
 
   def caveats
